@@ -1,10 +1,9 @@
-<h1> Places I Have Been </h1>
+<h1>Places I've been</h1>
 <ul>
-   <%for names in @Places%>
-     <li>
-     <a href="/names/<%=names%>">
-     <%=Places.names%></a>
-     </li>
-    <%end%>
+<% for place in @places %>
+<li>
+<a href="/places/<%= place.id %>"><%= place.name %></a>
+</li>
+<% end %>
 </ul>
-   
+<p><a href="places/new">new places</a><p>

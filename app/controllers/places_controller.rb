@@ -1,7 +1,21 @@
-class ArticlesController < ApplicationController
+class PlacesController < ApplicationController
+
     def index
-        @names = Places.all
-end
-def show
-    @names=Places.find(params['name'])
-end
+        @places = Place.all
+    end
+
+    def new
+        @place = Place.new
+    end
+
+    def create
+        @place = Place.new(params["place"])
+        @place.save
+        redirect_to "/places"
+    end
+
+    def show
+        @place = Place.find(params["id"])
+    end
+
+    end
