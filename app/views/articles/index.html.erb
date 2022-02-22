@@ -1,8 +1,10 @@
-<h1> Places Yiyu Has Been </h1>
-<% name= Places.all%>
+<h1> Places I Have Been </h1>
 <ul>
-   <%for name in Places%>
-     <li><%=places.read_attribute(:name)%></li>
+   <%for name in @Places%>
+     <li>
+     <a href="/name/<%=name%>">
+     <%=Places.name%></a>
+     </li>
     <%end%>
 </ul>
    
