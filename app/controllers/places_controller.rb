@@ -4,6 +4,11 @@ class PlacesController < ApplicationController
         @places = Place.all
     end
 
+
+    def show
+        @place = Place.find(params["id"])
+    end
+
     def new
         @place = Place.new
     end
@@ -14,8 +19,6 @@ class PlacesController < ApplicationController
         redirect_to "/places"
     end
 
-    def show
-        @place = Place.find(params["id"])
-    end
+    
 
     end
