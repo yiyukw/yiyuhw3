@@ -1,10 +1,8 @@
 <h1> Places Yiyu Has Been </h1>
+<% places=name.all%>
 <ul>
-   <li>Mexico City</il>
-   <il>Charleston</il>
-   <il>Beijing</il>
-   <il>Amsterdam</il>
-
-   <il> New Places</il>
+   <%for name in places%>
+     <li><%=places.read_attribute(:name)%></li>
+     <%end%>
 </ul>
    
